@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template</title>
+    <style>
+      .pdf-viewer {
+        color: #73956f;
+        padding: 2vh 5vw;
+
+      }
+      .firstname {
+        font-size: 36px;
+      }
+
+      .contact {
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+      .label {
+        margin-top: 4vh;
+        font-weight: 600;
+        font-size: 20px;
+      }
+
+      .value {
+        height: 15vh;
+        width: 20vw;
+      }
+
+      .value > p {
+        font-size: 18px;
+        font-weight: 400;
+      }
+
+      .copywrite {
+        display: inline-flex;
+        flex-direction: row;
+        position: absolute;
+        left: 48%;
+        transform: translate(-48%);
+        font-size: 14px;
+      }
+
+      .icon {
+        align-self: center;
+        padding-right: 0.1vw;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pdf-viewer">
+      <h2 class="firstname">{firstName}</h2>
+      <p class="contact">{phoneNumber} | {email} | {address}</p>
+      <p class="label">Educational Background</p>
+      <div class="value">
+        <p>{education}</p>
+      </div>
+      <p class="label">Work Experience</p>
+      <div class="value">
+        <p>{experience}</p>
+      </div>
+      <p class="copywrite">© Peek 2022</p>
+      </div>
+    </div>
+  </body>
+</html>

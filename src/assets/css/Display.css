@@ -1,0 +1,85 @@
+.display-main {
+  background-image: url("../images/background-brush3.png");
+  background-size: contain;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+}
+
+.display-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 8vw;
+  align-items: center;
+}
+
+.action-icon {
+  height: 48px;
+  margin-top: 1vh;
+  margin-right: 0.5vw;
+}
+
+.color-icon {
+  position: relative;
+  display: inline;
+  height: 48px;
+  width: 48px;
+}
+
+#hidden-color-picker {
+  height: 60px;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+  position: absolute;
+  top: -1;
+  left: 0; 
+}
+
+.pdf-viewer {
+  background-color: white;
+  opacity: 0.9;
+  height: 70vh;
+  width: 70vw;
+  border-radius: 15px;
+  padding-left: 5vw;
+  color: #73956f;
+  overflow-y: auto;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.firstname {
+  font-size: 36px;
+}
+
+.contact {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.label {
+  margin-top: 4vh;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.value {
+  height: 15vh;
+  width: 20vw;
+}
+
+.value > p {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.copywrite {
+  text-align: center;
+  font-size: 15px;
+}

@@ -1,0 +1,87 @@
+.landing-main {
+  background-image: url("../images/brush-background.png");
+  background-size: contain;
+  background-position-x: right;
+  background-repeat: no-repeat;
+}
+
+.landing-main {
+  height: 100vh;
+  width: 100vw;
+}
+
+.column-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.background-splash {
+  position: relative;
+  height: 100vh;
+}
+
+.emoji {
+  font-family: "Water Brush";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  align-items: center;
+  color: #ffffff;
+}
+
+.emoji-texts {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 0.5;
+  color: #ffffff;
+}
+
+.cv_paper {
+  height: 40vh;
+}
+
+.mission_impossble {
+  height: 419px;
+}
+
+.peek-button {
+  width: 200px;
+  height: 70px;
+  background: #ffffff;
+  opacity: 0.9;
+  box-shadow: 0px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 22.5px;
+  color: #2f2e41;
+  font-size: 40px;
+}
+
+.mission-impossble-texts {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 0.5;
+  color: #ffffff;
+  padding-left: 66px;
+}
+
+.left-column {
+  display: flexbox;
+  flex-direction: column;
+  text-align: left;
+  padding-left: 240px;
+  flex: 2;
+}
+.center-column {
+  align-self: flex-end;
+  display: flexbox;
+  flex-direction: column;
+  flex: 1;
+  padding-right: 30px;
+}
+
+.right-column {
+  flex: 2;
+}
