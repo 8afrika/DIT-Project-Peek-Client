@@ -3,13 +3,20 @@ import { Link, useLocation } from "react-router-dom";
 import "../assets/css/Display.css";
 import Logo from "../components/Logo";
 import editIcon from "../assets/images/edit-button.png";
-import color from "../assets/images/color.png";
+import colorIcon from "../assets/images/color.png";
 import download from "../assets/images/download-button.png";
 import contactLine from "../assets/images/contact-line.png";
 import { BiCopyright } from "react-icons/bi";
+import { useState } from "react";
+import PageNotFound from "../components/PageNotFound";
 
 function Display() {
   const { state } = useLocation();
+  const [color, setColor] = useState("#73956f");
+
+  if (!state) {
+    return <PageNotFound />;
+  }
   const {
     firstName,
     lastName,
@@ -21,13 +28,27 @@ function Display() {
   } = state;
   return (
     <>
-      <div className="display-main">
+      <style>
+        {`
+      .dynamic-text-color {
+        color: ${color};
+      }
+      `}
+      </style>
+      <div className="display-main dynamic-text-color">
         <div className="display-header">
           <Logo />
           <div>
             <div className="color-icon action-icon">
-              <img src={color} alt="a white pen" />
-              <input id="hidden-color-picker" type={"color"} />
+              <img src={colorIcon} alt="a white pen" />
+              <input
+                id="hidden-color-picker"
+                type={"color"}
+                value={color}
+                onChange={(e) => {
+                  setColor(e.target.value);
+                }}
+              />
             </div>
 
             <Link className="action-icon" to="/userinput">
@@ -37,21 +58,22 @@ function Display() {
               className="download-icon action-icon"
               src={download}
               alt="a white pen"
+              onClick={()=>{}}
             />
           </div>
         </div>
         <div className="pdf-viewer">
-          <h2 className="firstname">First Name{firstName}</h2>
+          <h2 className="firstname">{firstName}</h2>
           <p className="contact">
-            0987654321{phoneNumber} | asdf@ghjj.com{email} | dnvkefhu{address}
+            {phoneNumber} | {email} | {address}
           </p>
           <p className="label">Educational Background</p>
           <div className="value">
-            <p>ngfsoagjnrefhbknstsuehblfntkjh{education}</p>
+            <p>{education}</p>
           </div>
           <p className="label">Work Experience</p>
           <div className="value">
-            <p>sljhvuhvb.kajhiuvb{experience}</p>
+            <p>{experience}</p>
           </div>
           <p className="copywrite">© Peek 2022</p>
         </div>

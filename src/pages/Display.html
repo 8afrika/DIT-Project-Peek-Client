@@ -8,9 +8,13 @@
     <style>
       .pdf-viewer {
         color: #73956f;
-        padding: 2vh 5vw;
-
+        padding: 0vh 5vw;
       }
+
+      .dynamic-text-color {
+        color: {color};
+      }
+
       .firstname {
         font-size: 36px;
       }
@@ -52,7 +56,7 @@
     </style>
   </head>
   <body>
-    <div class="pdf-viewer">
+    <div class="pdf-viewer dynamic-text-color">
       <h2 class="firstname">{firstName}</h2>
       <p class="contact">{phoneNumber} | {email} | {address}</p>
       <p class="label">Educational Background</p>

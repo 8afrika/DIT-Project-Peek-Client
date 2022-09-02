@@ -19,7 +19,6 @@ function UserInput() {
       <div className="user-input-main">
         <Logo />
         <div className="user-input-form">
-          {/* <form className="user-input-form"> */}
           <div className="first-column">
             <input
               className="input-feilds"
@@ -85,7 +84,6 @@ function UserInput() {
               }}
             ></textarea>
           </div>
-          {/* </form> */}
           <div className="third-column">
             <button
               className="peek-button"
