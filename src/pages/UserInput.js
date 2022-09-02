@@ -12,26 +12,49 @@ function UserInput() {
   const [address, setAddress] = useState("");
   const [education, setEducation] = useState("");
   const [experience, setExperience] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const navigate = useNavigate();
 
-  const onPreviewPressed = async () => {
-    const validationResponse = await validateEmail({email, phoneNumber});
-    console.log(validationResponse)
-
-    navigate("/display", {
-      state: {
-        firstName,
-        lastName,
-        email,
-        phoneNumber,
-        address,
-        education,
-        experience,
-      },
-    });
+  const isResponseOk = (validationResponse) => {
+    return (
+      validationResponse.emailIsValid &&
+      validationResponse.phoneIsValid &&
+      !validationResponse.error
+    );
   };
 
+  const onPreviewPressed = async () => {
+    const validationResponse = await validateEmail({ email, phoneNumber });
+    console.log(validationResponse);
+
+    if (isResponseOk(validationResponse)) {
+      navigate("/display", {
+        state: {
+          firstName,
+          lastName,
+          email,
+          phoneNumber,
+          address,
+          education,
+          experience,
+        },
+      });
+    } else {
+      if (validationResponse.error) {
+        setErrorMessage(validationResponse.error);
+      } else if (
+        !validationResponse.emailIsValid &&
+        !validationResponse.phoneIsValid
+      ) {
+        setErrorMessage("Invalid email and phone number");
+      } else if (!validationResponse.emailIsValid) {
+        setErrorMessage("Invalid email");
+      } else if (!validationResponse.phoneIsValid) {
+        setErrorMessage("Invalid phone number");
+      }
+    }
+  };
 
   return (
     <>
@@ -111,6 +134,7 @@ function UserInput() {
             >
               Preview
             </button>
+            <p className="error-text">{errorMessage}</p>
           </div>
           <div className="fourth-column"></div>
         </div>

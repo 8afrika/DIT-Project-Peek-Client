@@ -31,6 +31,6 @@ export const validateEmail = async ({ email, phoneNumber }) => {
         phoneIsValid: !responseData.toString().toLocaleLowerCase().includes("phone")
     }
   } catch (error) {
-    return { message: "Opps, something went wrong!" };
+    return { error: "Opps, something went wrong!" };
   }
 };

@@ -87,3 +87,7 @@
 .fourth-column{
   flex: 2;
 }
+
+.error-text{
+  color: red;
+}
