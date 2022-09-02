@@ -5,10 +5,9 @@ import Logo from "../components/Logo";
 import editIcon from "../assets/images/edit-button.png";
 import colorIcon from "../assets/images/color.png";
 import download from "../assets/images/download-button.png";
-import contactLine from "../assets/images/contact-line.png";
-import { BiCopyright } from "react-icons/bi";
 import { useState } from "react";
 import PageNotFound from "../components/PageNotFound";
+import { generatePDF } from "../data/generate-pdf";
 
 function Display() {
   const { state } = useLocation();
@@ -58,12 +57,12 @@ function Display() {
               className="download-icon action-icon"
               src={download}
               alt="a white pen"
-              onClick={()=>{}}
+              onClick={()=>{generatePDF(state)}}
             />
           </div>
         </div>
         <div className="pdf-viewer">
-          <h2 className="firstname">{firstName}</h2>
+          <h2 className="firstname">{firstName} {lastName}</h2>
           <p className="contact">
             {phoneNumber} | {email} | {address}
           </p>
