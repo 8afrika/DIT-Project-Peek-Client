@@ -10,6 +10,7 @@
 
 .input-feilds {
   background-color: #2f2e41;
+  color: #fff;
   opacity: 0.6;
   /* display: block; */
   height: 8vh;
@@ -22,8 +23,8 @@
 }
 .input-area {
   background-color: #2f2e41;
+  color: #fff;
   opacity: 0.6;
-  /* display: block; */
   height: 16vh;
   width: 17vw;
   border-radius: 15px;
@@ -36,6 +37,7 @@
 .user-input-form {
   display: flex;
   flex-direction: row;
+  color: white;
  
 }
 .peek-button {

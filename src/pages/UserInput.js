@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../assets/css/UserInput.css";
 import Logo from "../components/Logo";
+import { validateEmail } from "../data/validate-email";
 
 function UserInput() {
   const [firstName, setFirstName] = useState("");
@@ -13,6 +14,24 @@ function UserInput() {
   const [experience, setExperience] = useState("");
 
   const navigate = useNavigate();
+
+  const onPreviewPressed = async () => {
+    const validationResponse = await validateEmail({email, phoneNumber});
+    console.log(validationResponse)
+
+    navigate("/display", {
+      state: {
+        firstName,
+        lastName,
+        email,
+        phoneNumber,
+        address,
+        education,
+        experience,
+      },
+    });
+  };
+
 
   return (
     <>
@@ -49,7 +68,7 @@ function UserInput() {
             />
             <input
               className="input-feilds"
-              type={"number"}
+              type={"text"}
               placeholder="Phone Number"
               value={phoneNumber}
               onChange={(e) => {
@@ -88,15 +107,10 @@ function UserInput() {
             <button
               className="peek-button"
               type={"button"}
-              onClick={() => {
-                navigate("/display", {
-                  state: { firstName, lastName, email, phoneNumber, address },
-                });
-              }}
+              onClick={onPreviewPressed}
             >
-              Download
+              Preview
             </button>
-            <p>{firstName}</p>
           </div>
           <div className="fourth-column"></div>
         </div>

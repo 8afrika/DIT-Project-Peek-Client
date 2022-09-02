@@ -24,7 +24,7 @@ function Landing() {
           </div>
           <div className="center-column">
             <Link to={"userinput"}>
-              <Button label="Peek"/>
+              <Button label="Generate"/>
             </Link>
           </div>
           <div className="right-column">
