@@ -14,7 +14,7 @@ function Landing() {
         <div className="column-wrapper">
           <div className="left-column">
             <p className="emoji">Peek a boo! 👀</p>
-            <p className="emoji-texts">Need a birth certificate for something?</p>
+            <p className="emoji-texts">Need a CV for for your dream job?</p>
             <p className="emoji-texts">You don’t know how to make one?</p>
             <p className="emoji-texts">but you still need to be perfect.</p>
             <br />
@@ -37,7 +37,7 @@ function Landing() {
               Just give us all the necessary information
             </p>
             <p className="mission-impossble-texts">
-              and we will give you a perfect birth certificate.
+              and we will give you a perfect CV.
             </p>
             <br className="mission-impossble-texts" />
             <p className="mission-impossble-texts">

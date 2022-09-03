@@ -8,7 +8,7 @@ export const validateEmail = async ({ email, phoneNumber }) => {
     console.log(data)
 
     const response = await fetch(
-      "http://54.183.128.15/cv/preview",
+      "https://54.183.128.15/cv/preview",
 
       {
         method: "POST",

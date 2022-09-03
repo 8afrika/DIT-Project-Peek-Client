@@ -23,7 +23,7 @@ export const generatePDF = async ({
     // console.log(data);
 
     const response = await fetch(
-      "http://54.183.128.15/cv",
+      "https://54.183.128.15/cv",
 
       {
         method: "POST",
