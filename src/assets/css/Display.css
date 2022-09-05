@@ -1,4 +1,4 @@
-.display-main {
+/* .display-main {
   background-image: url("../images/background-brush3.png");
   background-size: contain;
   background-position-x: center;
@@ -81,4 +81,6 @@
 .copywrite {
   text-align: center;
   font-size: 15px;
+} */
+@media only screen and (max-width: 768px) {
 }
