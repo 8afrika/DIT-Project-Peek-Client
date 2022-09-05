@@ -1,4 +1,4 @@
-/* .user-input-main {
+.user-input-main {
   background-image: url("../images/bb-pl.png");
   background-size: contain;
   background-position-x: right;
@@ -89,7 +89,7 @@
 
 .error-text{
   color: red;
-} */
+}
 @media only screen and (max-width: 768px) {
   .user-input-main {
     background-image: url("../images/responsive/mobile-background-form.png");
