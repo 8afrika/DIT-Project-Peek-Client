@@ -1,4 +1,4 @@
-/* .landing-main {
+.landing-main {
   background-image: url("../images/brush-background.png");
   background-size: contain;
   background-position-x: right;
@@ -84,7 +84,7 @@
 
 .right-column {
   flex: 2;
-} */
+}
 
 @media only screen and (max-width: 768px) {
   .landing-main {

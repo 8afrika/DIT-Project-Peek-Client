@@ -3,11 +3,14 @@ import "../assets/css/Landing.css";
 import Logo from "../components/Logo";
 import cv_paper from "../assets/images/cv-paper.png";
 import mission_impossible from "../assets/images/mission-impossible.png";
+import { useMediaQuery, useMediaQueries } from "@react-hook/media-query";
 import { Link } from "react-router-dom";
 import Button from "../components/Button";
 
 function Landing() {
-  if (window.matchMedia("(max-width: 768px)")) {
+  const matchesPhone = useMediaQuery("only screen and (max-width: 768px)");
+
+  if (matchesPhone) {
     return (
       <>
         <div className="landing-main">
@@ -41,11 +44,9 @@ function Landing() {
               <br />
               <p className="mission-impossble-texts">Best part?....</p>
               <p className="mission-impossble-texts">
-                you can make it in your favorite 
+                you can make it in your favorite
               </p>
-              <p className="mission-impossble-texts">
-                color!!
-              </p>
+              <p className="mission-impossble-texts">color!!</p>
             </div>
             <div className="center-column">
               <Link to={"userinput"}>
