@@ -3,16 +3,13 @@ import "../assets/css/Landing.css";
 import Logo from "../components/Logo";
 import cv_paper from "../assets/images/cv-paper.png";
 import mission_impossible from "../assets/images/mission-impossible.png";
-import { useMediaQuery, useMediaQueries } from "@react-hook/media-query";
 import { Link } from "react-router-dom";
 import Button from "../components/Button";
 
 function Landing() {
-  const matchesPhone = useMediaQuery("only screen and (max-width: 768px)");
-
-  if (matchesPhone) {
-    return (
-      <>
+  return (
+    <>
+      <div className="mobile-landing">
         <div className="landing-main">
           <Logo />
           <div className="column-wrapper">
@@ -55,11 +52,9 @@ function Landing() {
             </div>
           </div>
         </div>
-      </>
-    );
-  } else {
-    return (
-      <>
+      </div>
+
+      <div className="desktop-landing">
         <div className="landing-main">
           <Logo />
           <div className="column-wrapper">
@@ -86,22 +81,22 @@ function Landing() {
                 src={mission_impossible}
                 alt="a man stealing data from a computer"
               />
-              <p className="mission-impossble-texts">
-                Just give us all the necessary information
-              </p>
-              <p className="mission-impossble-texts">
-                and we will give you a perfect CV.
-              </p>
-              <br className="mission-impossble-texts" />
-              <p className="mission-impossble-texts">
-                Best part?.... you can make it in your favorite color!!
-              </p>
+              <div className="mission-impossble-texts">
+                <p>Just give us all the necessary information</p>
+                <p >
+                  and we will give you a perfect CV.
+                </p>
+                <br />
+                <p >
+                  Best part?.... you can make it in your favorite color!!
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </>
-    );
-  }
+      </div>
+    </>
+  );
 }
 
 export default Landing;

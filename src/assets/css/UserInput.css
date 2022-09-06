@@ -125,7 +125,7 @@
     width: 68.5vw;
     border-radius: 22px;
     padding:  7px;
-    /* margin: 1vw 0; */
+    margin: 1vw 0;
     border: 0;
     font-size: 18px;
   }
@@ -140,14 +140,14 @@
     color: #2f2e41;
     font-size: 18px;
     border: none;
-    justify-content: center;
+    justify-content: left;
   }
   ::placeholder {
     color: #fff;
     font-size: 15px;
     opacity: 0.7;
-    padding-top: 5px;
-    padding-left: 5px;
+    padding-top: .5vh;
+    padding-left: 1vw;
   }
   .error-text{
     color: red;
@@ -156,23 +156,18 @@
     display: flexbox;
     flex-direction: column;
     text-align: center;
-    padding-left: 20px;
-    padding-top: 70px;
-    flex: 1;
+    padding-left: 7.2vw;
+    padding-top: 12vh;
   }
   .second-column{
-    display: flexbox;
-    flex-direction: column;
-    flex: 1;
-    padding-left: 20px;
+    padding-left: 4.6vw;
     text-align: center;
+    padding-top: 0px;
   
   }
   .third-column{
-    display: flexbox;
-    flex-direction: column;
     align-self: center;
     margin-top: .7vh;
-    margin-left: 2vw;
+    margin-left: -10vw;
   }
 }
