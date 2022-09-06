@@ -5,8 +5,6 @@ export const validateEmail = async ({ email, phoneNumber }) => {
       Phone_Number: phoneNumber,
     };
 
-    console.log(data)
-
     const response = await fetch(
       "https://54.183.128.15/cv/preview",
 

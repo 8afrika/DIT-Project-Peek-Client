@@ -26,7 +26,6 @@ function UserInput() {
 
   const onPreviewPressed = async () => {
     const validationResponse = await validateEmail({ email, phoneNumber });
-    console.log(validationResponse);
 
     if (isResponseOk(validationResponse)) {
       navigate("/display", {
